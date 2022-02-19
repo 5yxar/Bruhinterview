@@ -17,6 +17,7 @@ namespace Bruhinterview.Api.Controllers
             throw new NotImplementedException();
         }
 
+        
         [HttpGet]
         [Route("{id}")]
         public async Task<SubscriprionDocument> GetSubscription(Guid id)
