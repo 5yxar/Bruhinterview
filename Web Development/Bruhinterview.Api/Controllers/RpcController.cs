@@ -11,6 +11,41 @@ namespace Bruhinterview.Api.Controllers
     public class RpcController : Controller
     {
         [HttpPost]
+        [Route("getAllUsers")]
+        public async Task<IEnumerable<UserDocument>> GetAllUsers()
+        {
+            throw new NotImplementedException();
+        }
+
+        [HttpPost]
+        [Route("getUser/{id}")]
+        public async Task<UserDocument> GetUser(Guid id)
+        {
+            throw new NotImplementedException();
+        }
+
+        [HttpPost]
+        [Route("createUser")]
+        public async Task CreateUser(UserDocument userDocument)
+        {
+            throw new NotImplementedException();
+        }
+
+        [HttpPost]
+        [Route("changeUser/{id}")]
+        public async Task ChangeUser(UserDocument userDocument)
+        {
+            throw new NotImplementedException();
+        }
+
+        [HttpPost]
+        [Route("deleteUser/{id}")]
+        public async Task DeleteUser(Guid id)
+        {
+            throw new NotImplementedException();
+        }
+
+        [HttpPost]
         [Route("getAllMagazines")]
         public async Task<IEnumerable<MagazineDocument>> GetAllMagazines()
         {
@@ -46,8 +81,36 @@ namespace Bruhinterview.Api.Controllers
         }
 
         [HttpPost]
-        [Route("magazine/{magazineId}/subscribe/{userId}")]
-        public async Task DeleteMagazine(Guid magazineId, Guid userId)
+        [Route("user/{userId}/getAllSubscribtions/")]
+        public async Task GetAllSubscribes(Guid userId)
+        {
+            throw new NotImplementedException();
+        }
+
+        [HttpPost]
+        [Route("user/{userId}/getSubscribtion/{magazineId}")]
+        public async Task GetAllSubscribes(Guid userId, Guid magazineId)
+        {
+            throw new NotImplementedException();
+        }
+
+        [HttpPost]
+        [Route("/user/{userId}/subscribe/{magazineId}")]
+        public async Task CreateSubscribtion(Guid userId, Guid magazineId)
+        {
+            throw new NotImplementedException();
+        }
+
+        [HttpPost]
+        [Route("/user/{userId}/changeSubscribtion/{magazineId}")]
+        public async Task ChangeSubscribtion(Guid userId, Guid magazineId)
+        {
+            throw new NotImplementedException();
+        }
+
+        [HttpPost]
+        [Route("/user/{userId}/deletSubscribtion/{magazineId}")]
+        public async Task DeleteSubscribtion(Guid userId, Guid magazineId)
         {
             throw new NotImplementedException();
         }
