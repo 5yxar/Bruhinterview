@@ -2,9 +2,11 @@ namespace Patterns.Products.Bread
 {
     class BreadProductsFactory : ProductsFactory
     {
-        public override Product CreateProduct()
+        public override IProduct CreateProduct()
         {
-            return new BreadProduct();
+            return GiveMe.Bread()
+                         .WithName("Just Plain Bread")
+                         .Build();
         }
     }
 }

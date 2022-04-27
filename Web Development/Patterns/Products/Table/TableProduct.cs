@@ -2,13 +2,9 @@ using System.Drawing;
 
 namespace Patterns.Products.Table
 {
-    class TableProduct : Product
+    public class TableProduct : IProduct
     {
-        public Patterns.Table GetTable()
-        {
-            return GiveMe.Table().WithName("Just Plain Bread")
-                                 .WithSize(new Size(100, 200))
-                                 .Build();
-        }
+        public string Name { get; set; }
+        public Size Size { get; set; }
     }
 }

@@ -19,9 +19,9 @@ namespace Patterns.Products.Table
             return this;
         }
 
-        public Patterns.Table Build()
+        public TableProduct Build()
         {
-            return new Patterns.Table()
+            return new TableProduct()
             {
                 Name =name,
                 Size = size

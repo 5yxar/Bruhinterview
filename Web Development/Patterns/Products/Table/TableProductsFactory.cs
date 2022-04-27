@@ -1,10 +1,14 @@
+using System.Drawing;
+
 namespace Patterns.Products.Table
 {
     class TableProductsFactory : ProductsFactory
     {
-        public override Product CreateProduct()
+        public override IProduct CreateProduct()
         {
-            return new TableProduct();
+            return GiveMe.Table().WithName("Just Plain Bread")
+                         .WithSize(new Size(100, 200))
+                         .Build();
         }
     }
 }

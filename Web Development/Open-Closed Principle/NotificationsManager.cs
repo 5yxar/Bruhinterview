@@ -2,14 +2,16 @@ namespace Open_Closed_Principle_Practice
 {
     public class NotificationsManager
     {
-        public void SendEmail(string message)
-        {
-            // Код для отправки E-mail уведомления.
-        }
+        private readonly ISender _sender;
 
-        public void SendSms(string message)
+        public NotificationsManager(ISender sender)
         {
-            // Код для отправки SMS уведомления.
+            _sender = sender;
+        }
+        
+        public void Send(string message)
+        {
+            _sender.Send(message);
         }
     }
 }

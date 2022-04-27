@@ -24,9 +24,9 @@ namespace Patterns.Products.TV
             return this;
         }
         
-        public Patterns.TV Build()
+        public TvProduct Build()
         {
-            return new Patterns.TV()
+            return new TvProduct()
             {
                 Name =name,
                 Model = model,

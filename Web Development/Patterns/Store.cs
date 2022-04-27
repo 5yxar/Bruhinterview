@@ -1,9 +1,8 @@
-﻿using Patterns.Logger;
-using Patterns.Products;
+﻿using Patterns.Products;
 
 namespace Patterns
 {
-    public class Store
+    public class Store : IStore
     {
         private readonly ProductCreationChooser _strategyChooser;
 
@@ -14,11 +13,9 @@ namespace Patterns
         
         public Cart BuySomething(Cart cart, ProductType productType)
         {
-            var log = "Some log text";
-            var logger = new DebugLog();
-            logger.PrintLog(log);
             var strategy = _strategyChooser.GetProductCreationFactory(productType);
             cart.Add(strategy.CreateProduct());
+            
             return cart;
         }
     }

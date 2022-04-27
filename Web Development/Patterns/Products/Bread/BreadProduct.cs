@@ -1,11 +1,7 @@
 namespace Patterns.Products.Bread
 {
-    class BreadProduct : Product
+    public class BreadProduct : IProduct
     {
-        public Patterns.Bread GetBread()
-        {
-            return GiveMe.Bread().WithName("Just Plain Bread")
-                                 .Build();
-        }
+        public string Name { get; set; }
     }
 }

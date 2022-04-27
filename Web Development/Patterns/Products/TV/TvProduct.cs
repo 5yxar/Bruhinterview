@@ -1,13 +1,9 @@
 namespace Patterns.Products.TV
 {
-    class TvProduct : Product
+    public class TvProduct : IProduct
     {
-        public Patterns.TV GetTv()
-        {
-            return GiveMe.TV().WithName("LG")
-                              .WithModel("NANO8900")
-                              .WithSerialNumber(132302139)
-                              .Build();
-        }
+        public string Name { get; set; }
+        public string Model{ get; set; }
+        public int SerialNumber{ get; set; }
     }
 }

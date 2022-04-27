@@ -2,9 +2,12 @@ namespace Patterns.Products.TV
 {
     class TvProductsFactory : ProductsFactory
     {
-        public override Product CreateProduct()
+        public override IProduct CreateProduct()
         {
-            return new TvProduct();
+            return GiveMe.TV().WithName("LG")
+                         .WithModel("NANO8900")
+                         .WithSerialNumber(132302139)
+                         .Build();
         }
     }
 }

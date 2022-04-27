@@ -10,9 +10,9 @@ namespace Patterns.Products.Bread
             return this;
         }
         
-        public Patterns.Bread Build()
+        public BreadProduct Build()
         {
-            return new Patterns.Bread()
+            return new BreadProduct()
             {
                 Name =name,
             };

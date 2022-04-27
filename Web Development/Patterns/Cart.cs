@@ -4,7 +4,7 @@ namespace Patterns
 {
     public class Cart
     {
-        public void Add(Product product)
+        public void Add(IProduct product)
         {
             throw new System.NotImplementedException();
         }

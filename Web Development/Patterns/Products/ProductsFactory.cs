@@ -2,6 +2,7 @@ namespace Patterns.Products
 {
     public abstract class ProductsFactory
     {
-        public abstract Product CreateProduct();
+        public ProductEntitiesBuilder GiveMe = new ProductEntitiesBuilder();
+        public abstract IProduct CreateProduct();
     }
 }
